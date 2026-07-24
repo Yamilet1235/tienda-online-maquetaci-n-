@@ -1,0 +1,522 @@
+/* Carrusel principal */
+
+.carousel-item {
+    position: relative;
+    height: 430px;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+
+.carousel-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(45, 10, 55, 0.88) 0%,
+            rgba(72, 20, 90, 0.72) 45%,
+            rgba(0, 0, 0, 0.15) 100%
+        );
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    left: 8%;
+    right: auto;
+    width: 48%;
+    transform: translateY(-50%);
+    text-align: left;
+    z-index: 2;
+}
+
+.carousel-caption h2 {
+    color: white;
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 18px;
+    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.carousel-caption p {
+    color: #f7edf9;
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin-bottom: 24px;
+    max-width: 520px;
+}
+
+.banner-etiqueta {
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 7px 15px;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.18);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    backdrop-filter: blur(4px);
+}
+
+.btn-beauty {
+    padding: 12px 24px;
+    border-radius: 999px;
+    background-color: #f2b84b;
+    color: #3b153f;
+    font-weight: 700;
+    border: none;
+}
+
+.btn-beauty:hover {
+    background-color: #ffd477;
+    color: #3b153f;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 7%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 46px;
+    height: 46px;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.22);
+    background-size: 55%;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 34px;
+    height: 4px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+}
+
+@media (max-width: 767px) {
+    .carousel-item {
+        height: 480px;
+    }
+
+    .carousel-overlay {
+        background: rgba(42, 12, 52, 0.72);
+    }
+
+    .carousel-caption {
+        display: block !important;
+        left: 8%;
+        right: 8%;
+        width: auto;
+        text-align: center;
+    }
+
+    .carousel-caption h2 {
+        font-size: 2.3rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+/* =========================
+   ENCABEZADO DE BEAUTY SKIN
+   ========================= */
+
+.top-bar {
+    padding: 9px 0;
+    background: linear-gradient(
+        90deg,
+        #35103f,
+        #64256f,
+        #35103f
+    );
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.top-bar span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.main-header {
+    padding: 22px 0;
+    background-color: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #eadfeb;
+    box-shadow: 0 5px 22px rgba(66, 22, 76, 0.08);
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #ec4899,
+        #7c3aed
+    );
+
+    color: white;
+    font-size: 1.5rem;
+
+    box-shadow: 0 8px 18px rgba(124, 58, 237, 0.22);
+}
+
+.brand-name {
+    margin: 0;
+
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+
+    background: linear-gradient(
+        90deg,
+        #b4135b,
+        #7c3aed
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.brand-subtitle {
+    margin: 5px 0 0;
+    color: #78657b;
+    font-size: 0.85rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.icon-button,
+.cart-button {
+    position: relative;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #eadfeb;
+    border-radius: 50%;
+
+    background-color: #ffffff;
+    color: #43204c;
+
+    font-size: 1.35rem;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.icon-button:hover,
+.cart-button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #ec4899
+    );
+    color: white;
+    box-shadow: 0 9px 20px rgba(124, 58, 237, 0.22);
+}
+
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -4px;
+
+    min-width: 24px;
+    height: 24px;
+    padding: 0 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 999px;
+    border: 2px solid white;
+
+    background-color: #e72d59;
+    color: white;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Adaptación para celular */
+
+@media (max-width: 576px) {
+    .top-bar span:not(:first-child) {
+        display: none;
+    }
+
+    .main-header {
+        padding: 16px 0;
+    }
+
+    .brand-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .brand-name {
+        font-size: 1.55rem;
+    }
+
+    .brand-subtitle {
+        font-size: 0.7rem;
+    }
+
+    .icon-button,
+    .cart-button {
+        width: 43px;
+        height: 43px;
+    }
+}
+
+/* =========================
+   CATEGORÍAS Y PRODUCTOS
+   ========================= */
+
+.categories-card {
+    position: static;
+    top: 20px;
+    overflow: hidden;
+    border: 1px solid #eadfeb;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 14px 35px rgba(66, 22, 76, 0.09);
+}
+
+.categories-title {
+    margin: 0;
+    padding: 22px;
+    background: linear-gradient(
+        135deg,
+        #4b1456,
+        #7d2a87
+    );
+    color: white;
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+.categories-card .list-group-item {
+    padding: 17px 20px;
+    border-color: #f0e8f1;
+    color: #4f3c52;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.categories-card .list-group-item:hover {
+    padding-left: 27px;
+    background-color: #fbf1fa;
+    color: #a81767;
+}
+
+.section-label {
+    color: #b11667;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.products-title {
+    margin: 6px 0 0;
+    color: #3f1649;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.product-card {
+    overflow: hidden;
+    border: 1px solid #eee3ef;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 30px rgba(66, 22, 76, 0.08);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 19px 38px rgba(66, 22, 76, 0.16);
+}
+
+.product-image {
+    height: 245px;
+    object-fit: cover;
+}
+
+.product-category {
+    color: #b11667;
+    font-size: 0.77rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.product-name {
+    margin-top: 8px;
+    color: #3d1945;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.product-description {
+    color: #746478;
+    font-size: 0.92rem;
+}
+
+.product-price {
+    margin: 5px 0 18px;
+    color: #9f165d;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.btn-add-cart {
+    padding: 11px 15px;
+    border-radius: 12px;
+    background: linear-gradient(
+        90deg,
+        #6f2380,
+        #c21f73
+    );
+    color: white;
+    font-weight: 700;
+    border: none;
+}
+
+.btn-add-cart:hover {
+    background: linear-gradient(
+        90deg,
+        #c21f73,
+        #6f2380
+    );
+    color: white;
+}
+
+@media (max-width: 575px) {
+    .categories-card {
+        position: static;
+    }
+
+    .products-title {
+        font-size: 1.65rem;
+    }
+
+    .product-image {
+        height: 280px;
+    }
+}
+
+/* Evita que los productos se monten sobre el carrusel */
+
+.carousel-section {
+    display: block;
+    margin-bottom: 70px;
+}
+
+#carouselBeauty,
+#carouselBeauty .carousel-inner,
+#carouselBeauty .carousel-item {
+    min-height: 430px;
+}
+
+#productos {
+    position: relative;
+    z-index: 1;
+    clear: both;
+    margin-top: 0 !important;
+    background-color: #ffffff;
+}
+
+/* =========================
+   PIE DE PÁGINA
+   ========================= */
+
+.beauty-footer {
+    margin-top: 90px;
+    padding: 70px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #3f1649,
+        #6f2380,
+        #9f165d
+    );
+
+    color: white;
+}
+
+.footer-brand {
+    margin-bottom: 12px;
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.footer-text {
+    margin-bottom: 6px;
+    color: #f7eaf5;
+    font-size: 1rem;
+}
+.footer-subtitle{
+    color:#f7d8ec;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:.95rem;
+    margin-top:-5px;
+    margin-bottom:25px;
+}
+.banner-uno {
+    object-position: center 28%;
+}
+
+.banner-tres{
+    object-position: center 30%;
+}
